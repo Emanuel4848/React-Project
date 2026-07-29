@@ -9,6 +9,7 @@ function App() {
       <div className="dashboard">
         <Acceso/>
         <Menu/>
+        <Contenido/>
 
       </div>
 

@@ -6,12 +6,12 @@ function Contenido() {
     return (
         <>
             <main className="content-wrap">
-            <Preventa/>
-            <Aspirantes/>
-            <Profesiones/>
+                <Preventa/>
+                <Aspirantes/>
+                <Profesiones/>
             </main>
         </>
     )
 }
 
-export default Contenido()
+export default Contenido;
