@@ -4,8 +4,62 @@ import Contenido from "./Contenido";
 import Preventa from "./Preventa";
 import Aspirantes from "./Aspirantes";
 import Profesiones from "./Profesiones";
+import foto1 from "../assets/img/foto1.jpg";
+import foto2 from "../assets/img/foto2.jpg";
+import foto3 from "../assets/img/foto3.jpg";
+import foto4 from "../assets/img/foto4.jpg";
+import foto5 from "../assets/img/foto5.jpg";
+import foto6 from "../assets/img/foto6.jpg";
 
 function Menu() {
+
+  //datos quemados (array de objetos)
+  const profesionesQuemadas = [
+    {
+      id: 1,
+      name: "Desarrollador Web",
+    },
+
+    {
+      id: 2,
+      name: "Desarrollador Backend",
+    },
+    {
+      id: 3,
+      name: "Administrador de base de datos",
+    },
+    {
+      id: 4,
+      name: "Area ciberseguridad",
+    },
+    {
+      id: 5,
+      name: "Area cloud",
+    }
+  ]
+
+  const aspirantes = [
+    {
+      id: 1,
+      name: "Emanuel Gonzalez",
+      profesion: "Desarrollador Jr Frontend",
+      img: foto5
+    },
+    {
+      id: 2,
+      name: "Yuviny Velásquez",
+      profesion: "Desarrolladro Jr Backend",
+      img: foto2
+    },
+    {
+      id: 3,
+      name: "Jose Cardona",
+      profesion: "Administrador Jr de Base de datos",
+      img: foto6
+    },
+  ]
+
+
   return (
     <>
       {/**componente completo de Menu:  Opcones[empresas, personas, profeisones, postulate aqui, contancto] */}
@@ -70,8 +124,9 @@ function Menu() {
         <Routes>
           <Route path="/" element={<Contenido />} />
           <Route path="/empresa" element={<Preventa />} />
-          <Route path="/aspirantes" element={<Aspirantes />} />
-          <Route path="/profesiones" element={<Profesiones />} />
+          <Route path="/aspirantes" element={<Aspirantes listAspirantes={aspirantes} />} />
+                                                            {/*Enviando una propt llamada listado. */}
+          <Route path="/profesiones" element={<Profesiones listProfesiones={profesionesQuemadas} />} />
         </Routes>
       </main>
     </>
