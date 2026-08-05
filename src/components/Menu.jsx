@@ -122,7 +122,7 @@ function Menu() {
       {/*creando Enrutamiento */}
       <main className="content-wrap">
         <Routes>
-          <Route path="/" element={<Contenido />} />
+          <Route path="/" element={<Contenido listAspirantes={aspirantes} listProfesiones={profesionesQuemadas} />} />
           <Route path="/empresa" element={<Preventa />} />
           <Route path="/aspirantes" element={<Aspirantes listAspirantes={aspirantes} />} />
                                                             {/*Enviando una propt llamada listado. */}
